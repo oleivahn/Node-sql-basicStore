@@ -84,7 +84,7 @@ function buyProduct() {
                     if (err) throw err;
                     var productRow = res[0];
                     var total = answer.amount * productRow.price;
-                    console.log(productRow);
+                    // console.log(productRow);
 
 
                     if (amount <= productRow.stock) {
@@ -112,6 +112,7 @@ function inventory() {
         for (var i = 0; i < res.length; i++) {
             console.log("Item Id: " + res[i].itemId + " || Name: " + res[i].productName + " || Department: " + res[i].departmentName + " || Price: " + res[i].price + " || Available: " + res[i].stock);
         };
+        menu();
     });
-    menu();
+
 };
